@@ -12,7 +12,8 @@ RUN CMAKE_ARGS="-DGGML_CUDA=ON" FORCE_CMAKE=1 pip install llama-cpp-python
 
 # Download DeepSeek model files
 RUN for i in $(seq -f "%05g" 1 15); do \
-    wget -P workspace https://huggingface.co/unsloth/DeepSeek-R1-GGUF/resolve/main/DeepSeek-R1-Q8_0/DeepSeek-R1-Q8_0-${i}-of-00015.gguf; \
+    wget -P workspace https://huggingface.co/unsloth/DeepSeek-R1-GGUF/resolve/main/DeepSeek-R1-Q8_0/DeepSeek-R1.Q8_0-${i}-of-00015.gguf; \
+    
 done
 
 # for local test
